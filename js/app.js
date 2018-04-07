@@ -1,6 +1,6 @@
 // Enemies our player must avoid
 class Enemy {
-	constructor(positionY) {
+	constructor(positionY, speedLimitValue) {
 		// Variables applied to each of our instances go here
 		this.x = 0;
 		this.y = positionY;
@@ -11,12 +11,29 @@ class Enemy {
 		};
 		//initial speed
 		this.speedLimit = this.speed.regular;
-
+		this.speedLimitValue = speedLimitValue;
+		this.setSpeedLimit();
 
 		// The image/sprite for our enemies, this uses
 		// a helper we've provided to easily load images
 		this.sprite = 'images/enemy-bug.png';
 	}
+
+	// Set speed limit
+	setSpeedLimit() {
+		switch(this.speedLimitValue) {
+			case 'slow':
+				this.speedLimit = this.speed.slow;
+				break;
+			case 'regular':
+				this.speedLimit = this.speed.regular;
+				break;
+			case 'fast':
+				this.speedLimit = this.speed.fast;
+				break;
+		}
+	}
+
 		// Update the enemy's position, required method for game
 		// Parameter: dt, a time delta between ticks
 		update(dt) {
@@ -31,20 +48,7 @@ class Enemy {
 				ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 		}
 
-		// Set speed limit
-		setSpeedLimit(speedLimit) {
-			switch(speedLimit) {
-				case 'slow':
-					this.speedLimit = this.speed.slow;
-					break;
-				case 'regular':
-					this.speedLimit = this.speed.regular;
-					break;
-				case 'fast':
-					this.speedLimit = this.speed.fast;
-					break;
-			}
-		};
+
 }
 
 // Now write your own player class
@@ -74,11 +78,10 @@ class Player {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-let enemy1 = new Enemy(60);
-enemy1.setSpeedLimit('slow');
-let enemy2 = new Enemy(180);
-let enemy3 = new Enemy(320);
-enemy3.setSpeedLimit('fast');
+let enemy1 = new Enemy(60, 'slow');
+let enemy2 = new Enemy(180, 'regular');
+let enemy3 = new Enemy(320, 'fast');
+
 
 const allEnemies = [enemy1, enemy2, enemy3];
 
