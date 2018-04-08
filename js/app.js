@@ -3,7 +3,7 @@ class Enemy {
 	constructor(speedLimitValue) {
 		// Variables applied to each of our instances go here
 		this.x = 0;
-		this.randomPositions = [60, 145, 230, 315]; // possible enemy positions
+		this.randomPositions = [60, 145, 230]; // possible enemy positions
 		this.y =  this.setRandomPosition(this.randomPositions.length); // random position
 		this.speed = {
 			slow: 100,
