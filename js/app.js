@@ -81,8 +81,24 @@ class Player {
 		ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 	}
 
-	handleInput() {
+	handleInput(key) {
+		switch(key) {
+			case 'left':
+			this.x -= 100;
+			break;
 
+			case 'right':
+			this.x += 100;
+			break;
+
+			case 'up':
+			this.y -= 80;
+			break;
+
+			case 'down':
+			this.y += 80;
+			break;
+		}
 	}
 }
 
@@ -109,6 +125,5 @@ document.addEventListener('keyup', function(e) {
 				39: 'right',
 				40: 'down'
 		};
-
 		player.handleInput(allowedKeys[e.keyCode]);
 });
