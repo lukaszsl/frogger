@@ -67,7 +67,7 @@ class Enemy {
 
 class Player {
 	constructor() {
-		this.sprite = 'images/char-boy.png';
+		this.sprite = 'images/char-boy.png'; // Load the player image
 	}
 
 	update(dt) {
