@@ -48,6 +48,11 @@ class Enemy {
 		// which will ensure the game runs at the same speed for
 		// all computers.
 		this.x += this.speedLimit * dt;
+		// If enemy hit the end of the board, reset positions
+		if (this.x > 505) {
+			this.x = 0;
+			this.y = this.setRandomPosition(this.randomPositions.length);
+		}
 	}
 
 	// Draw the enemy on the screen, required method for game
