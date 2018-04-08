@@ -1,18 +1,19 @@
 // Enemies our player must avoid
 class Enemy {
-	constructor(positionY, speedLimitValue) {
+	constructor(speedLimitValue) {
 		// Variables applied to each of our instances go here
 		this.x = 0;
-		this.y = positionY;
+		this.randomPositions = [60, 145, 230, 315]; // possible enemy positions
+		this.y =  this.setRandomPosition(this.randomPositions.length); // random position
 		this.speed = {
 			slow: 100,
 			regular: 200,
 			fast: 300
 		};
-		//initial speed
-		this.speedLimit = this.speed.regular;
+
+		this.speedLimit = this.speed.regular; //initial speed
 		this.speedLimitValue = speedLimitValue;
-		this.setSpeedLimit();
+		this.setSpeedLimit(); //speed limit
 
 		// The image/sprite for our enemies, this uses
 		// a helper we've provided to easily load images
@@ -34,21 +35,25 @@ class Enemy {
 		}
 	}
 
-		// Update the enemy's position, required method for game
-		// Parameter: dt, a time delta between ticks
-		update(dt) {
-				// You should multiply any movement by the dt parameter
-				// which will ensure the game runs at the same speed for
-				// all computers.
-				this.x += this.speedLimit * dt;
-		}
+	// Set random initial position Y
+	// Function return one of the random possible positions
+	setRandomPosition(max) {
+		return this.randomPositions[Math.floor(Math.random() * Math.floor(max))]; // return number from 0 to max
+	}
 
-		// Draw the enemy on the screen, required method for game
-		render() {
-				ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-		}
+	// Update the enemy's position, required method for game
+	// Parameter: dt, a time delta between ticks
+	update(dt) {
+		// You should multiply any movement by the dt parameter
+		// which will ensure the game runs at the same speed for
+		// all computers.
+		this.x += this.speedLimit * dt;
+	}
 
-
+	// Draw the enemy on the screen, required method for game
+	render() {
+		ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+	}
 }
 
 // Now write your own player class
@@ -78,9 +83,9 @@ class Player {
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-let enemy1 = new Enemy(60, 'slow');
-let enemy2 = new Enemy(180, 'regular');
-let enemy3 = new Enemy(320, 'fast');
+let enemy1 = new Enemy('slow');
+let enemy2 = new Enemy('regular');
+let enemy3 = new Enemy('fast');
 
 
 const allEnemies = [enemy1, enemy2, enemy3];
