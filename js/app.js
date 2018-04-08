@@ -68,6 +68,9 @@ class Enemy {
 class Player {
 	constructor() {
 		this.sprite = 'images/char-boy.png'; // Load the player image
+		// Set player's initial position
+		this.x = 200;
+		this.y = 380;
 	}
 
 	update(dt) {
