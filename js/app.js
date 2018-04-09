@@ -73,7 +73,7 @@ class Player {
 		this.y = 380;
 	}
 
-	update(dt) {
+	update() {
 
 	}
 
