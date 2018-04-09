@@ -99,6 +99,11 @@ class Player {
 			this.y += 80;
 			break;
 		}
+		// prevent the player from leaving the board
+		if(this.y > 380) this.y -= 80;
+		else if(this.y < -20) this.y += 80;
+		else if(this.x > 400) this.x -= 100;
+		else if(this.x < 0) this.x += 100;
 	}
 }
 
