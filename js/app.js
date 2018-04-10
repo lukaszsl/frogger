@@ -105,6 +105,12 @@ class Player {
 		else if(this.x > 400) this.x -= 100;
 		else if(this.x < 0) this.x += 100;
 	}
+
+	// return player to initial position
+	resetPosition() {
+		this.x = 200;
+		this.y = 380;
+	}
 }
 
 
