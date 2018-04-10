@@ -80,6 +80,13 @@ class Player {
 				this.resetPosition();
 			}
 		}
+
+		// Reset player position if it reaches the water
+		if(this.y === -20) {
+			setTimeout(()=> {
+				this.resetPosition();
+			}, 500);
+		}
 	}
 
 	render() {
