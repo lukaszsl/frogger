@@ -3,7 +3,7 @@ class Enemy {
 	constructor(speedLimitValue) {
 		// Variables applied to each of our instances go here
 		this.x = 0;
-		this.randomPositions = [60, 145, 230]; // possible enemy positions
+		this.randomPositions = [60, 140, 220]; // possible enemy positions
 		this.y =  this.setRandomPosition(this.randomPositions.length); // random position
 		this.speed = {
 			slow: 100,
@@ -74,7 +74,12 @@ class Player {
 	}
 
 	update() {
-
+		// Handle collision with the enemy
+		for (let i = 0; i < allEnemies.length; i++){
+			if ((this.y === allEnemies[i].y) && (this.x < allEnemies[i].x + 60) && (this.x > allEnemies[i].x - 60)) {
+				this.resetPosition();
+			}
+		}
 	}
 
 	render() {
