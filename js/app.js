@@ -1,6 +1,6 @@
 // Enemies our player must avoid
 class Enemy {
-	constructor(speedLimitValue) {
+	constructor(speedLimitValue = 'regular') {
 		// Variables applied to each of our instances go here
 		this.x = 0;
 		this.randomPositions = [60, 140, 220]; // possible enemy positions
@@ -11,7 +11,6 @@ class Enemy {
 			fast: 300
 		};
 
-		this.speedLimit = this.speed.regular; //initial speed
 		this.speedLimitValue = speedLimitValue;
 		this.setSpeedLimit(); //speed limit
 
