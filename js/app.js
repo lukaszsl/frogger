@@ -1,4 +1,5 @@
 const modal = document.querySelector('.modal');
+const modalBtn = document.querySelector('.modal__button');
 let endGame = false;
 
 // Enemies our player must avoid
@@ -128,6 +129,11 @@ class Player {
 	// Display modal with final message and play again button
 	displayModal() {
 		modal.style.display = 'flex';
+		// If user click the button start new game
+		modalBtn.addEventListener('click', function() {
+			modal.style.display = 'none';
+			endGame = false;
+		});
 		return true;
 	}
 }
