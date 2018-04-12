@@ -21,9 +21,9 @@
 ## How to play
 
 * You can move your character like this:
-	- U+21E7 UP (up arrow)
-	- U+21E9 DOWN (down arrow)
-	- U+21E6 LEFT (left arrow)
+	- UP ⇧ (up arrow)
+	- DOWN ⇩ (down arrow)
+	- LEFT ⇦ (left arrow)
 	- RIGHT ⇨ (right arrow)
 
 
