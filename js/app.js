@@ -1,3 +1,5 @@
+const modal = document.querySelector('.modal');
+
 // Enemies our player must avoid
 class Enemy {
 	constructor(speedLimitValue = 'regular') {
@@ -77,10 +79,11 @@ class Player {
 			}
 		}
 
-		// Reset player position if it reaches the water
+		// Reset player position and display modal if it reaches the water
 		if(this.y === -20) {
 			setTimeout(()=> {
 				this.resetPosition();
+				this.displayModal();
 			}, 500);
 		}
 	}
@@ -115,10 +118,15 @@ class Player {
 		else if(this.x < 0) this.x += 100;
 	}
 
-	// return player to initial position
+	// Return player to initial position
 	resetPosition() {
 		this.x = 200;
 		this.y = 380;
+	}
+
+	// Display modal with final message and play again button
+	displayModal() {
+		modal.style.display = 'flex';
 	}
 }
 
