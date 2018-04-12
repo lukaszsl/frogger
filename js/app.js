@@ -1,4 +1,5 @@
 const modal = document.querySelector('.modal');
+let endGame = false;
 
 // Enemies our player must avoid
 class Enemy {
@@ -83,7 +84,7 @@ class Player {
 		if(this.y === -20) {
 			setTimeout(()=> {
 				this.resetPosition();
-				this.displayModal();
+				endGame = this.displayModal(); // assign true if modal is displayed
 			}, 500);
 		}
 	}
@@ -127,6 +128,7 @@ class Player {
 	// Display modal with final message and play again button
 	displayModal() {
 		modal.style.display = 'flex';
+		return true;
 	}
 }
 
