@@ -4,11 +4,19 @@
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+}
+
+.game-name {
+	width: 100vw;
+	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+	color: #79be59; /* green */
+	font-size: 40px;
+	margin-top: 45px;
 }
 
 .modal {
