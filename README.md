@@ -30,3 +30,5 @@
 ## How I made it
 
 To developed this game I have used three basic web languages: HTML, CSS and Java Script.
+
+Made by ᛚᚢᚲᚨᛋ
