@@ -10,6 +10,7 @@ body {
 	align-items: center;
 }
 
+/*=================== TITLE =====================*/
 .game-name {
 	width: 100vw;
 	text-align: center;
@@ -19,6 +20,7 @@ body {
 	margin-top: 45px;
 }
 
+/*=================== MODAL =====================*/
 .modal {
 	width: 100vw;
 	position: absolute;
@@ -54,4 +56,25 @@ body {
 	border-radius: 10px;
 	cursor: pointer;
 	margin: 15px 0;
+}
+
+/*=================== FOOTER =====================*/
+.footer {
+	width: 100vw;
+	margin-top: 6%;
+	text-align: center;
+}
+
+.footer__social-btn {
+	color: #79be59; /* green */
+	margin: 0 1%;
+}
+
+.icon-scale {
+	transition: 0.5s;
+}
+
+.icon-scale:hover {
+	transform: scale(1.5);
+	transition: 0.5s;
 }
