@@ -4,6 +4,7 @@
 }
 
 body {
+	background: #ffffff url('../images/geometry2.png'); /* Background pattern from Subtle Patterns */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
