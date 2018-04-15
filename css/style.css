@@ -69,10 +69,6 @@ body {
 	margin: 15px 0;
 }
 
-h3 {
-	font-size: 2em;
-}
-
 /*=================== WELCOME MODAL =====================*/
 .modal--welcome {
 	background: #ffffff url('../images/geometry2.png');
@@ -80,6 +76,11 @@ h3 {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+}
+
+.modal__header--rules {
+	font-size: 2em;
+	margin-top: 25px;
 }
 
 /*=================== THE END MODAL =====================*/
