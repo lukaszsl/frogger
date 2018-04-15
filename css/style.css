@@ -39,7 +39,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 30px 0;
-	background-color: rgba(255, 255, 255, 0.8);
 }
 
 .modal__icon {
@@ -84,8 +83,9 @@ h3 {
 }
 
 /*=================== THE END MODAL =====================*/
-
-
+.modal--the-end {
+	background-color: rgba(255, 255, 255, 0.8);
+}
 
 /*=================== FOOTER =====================*/
 .footer {
