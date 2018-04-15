@@ -1,5 +1,7 @@
 const modal = document.querySelector('.modal');
-const modalBtn = document.querySelector('.modal__button');
+const modalWelcome = document.querySelector('.modal--welcome');
+const startGameBtn = document.querySelector('#start-game-btn');
+const playAgainBtn = document.querySelector('#play-again-btn');
 let endGame = false;
 
 // Enemies our player must avoid
@@ -130,7 +132,7 @@ class Player {
 	displayModal() {
 		modal.style.display = 'flex';
 		// If user click the button start new game
-		modalBtn.addEventListener('click', function() {
+		playAgainBtn.addEventListener('click', function() {
 			modal.style.display = 'none';
 			endGame = false;
 		});
@@ -146,6 +148,11 @@ const enemy3 = new Enemy('fast');
 const allEnemies = [enemy1, enemy2, enemy3];
 
 const player = new Player();
+
+// Start game after click the button
+startGameBtn.addEventListener('click', function(e) {
+	modalWelcome.style.display='none';
+});
 
 // Listen for key presses and send the keys to
 // Player.handleInput() method
