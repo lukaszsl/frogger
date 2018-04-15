@@ -1,5 +1,5 @@
-const modal = document.querySelector('.modal');
 const modalWelcome = document.querySelector('.modal--welcome');
+const modalTheEnd = document.querySelector('.modal--the-end');
 const startGameBtn = document.querySelector('#start-game-btn');
 const playAgainBtn = document.querySelector('#play-again-btn');
 let endGame = false;
@@ -130,10 +130,10 @@ class Player {
 
 	// Display modal with final message and play again button
 	displayModal() {
-		modal.style.display = 'flex';
+		modalTheEnd.style.display = 'flex';
 		// If user click the button start new game
 		playAgainBtn.addEventListener('click', function() {
-			modal.style.display = 'none';
+			modalTheEnd.style.display = 'none';
 			endGame = false;
 		});
 		return true;
@@ -150,7 +150,7 @@ const allEnemies = [enemy1, enemy2, enemy3];
 const player = new Player();
 
 // Start game after click the button
-startGameBtn.addEventListener('click', function(e) {
+startGameBtn.addEventListener('click', function() {
 	modalWelcome.style.display='none';
 });
 
