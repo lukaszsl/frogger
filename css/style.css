@@ -30,7 +30,7 @@ body {
 	margin-top: 45px;
 }
 
-/*=================== THE END MODAL =====================*/
+/*=================== MODAL =====================*/
 .modal {
 	width: 100vw;
 	position: absolute;
@@ -43,18 +43,19 @@ body {
 }
 
 .modal__icon {
-	font-size: 50px;
+	font-size: 70px;
+	color: #79be59; /* green */
 }
 
 .modal__header {
 	padding: 10px 0;
 	text-align: center;
-	font-size: 35px;
+	font-size: 2.5em;
 }
 
 .modal__message {
 	padding: 5px 0;
-	font-size: 20px;
+	font-size: 1.5em;
 }
 
 .modal__button {
@@ -69,6 +70,10 @@ body {
 	margin: 15px 0;
 }
 
+h3 {
+	font-size: 2em;
+}
+
 /*=================== WELCOME MODAL =====================*/
 .modal--welcome {
 	background: #ffffff url('../images/geometry2.png');
@@ -78,18 +83,9 @@ body {
 	height: 100%;
 }
 
-.modal__icon {
-	font-size: 70px;
-	color: #79be59;
-}
+/*=================== THE END MODAL =====================*/
 
-.modal__header {
-	font-size: 2.5em;
-}
 
-.modal__message {
-	font-size: 1.5em;
-}
 
 /*=================== FOOTER =====================*/
 .footer {
